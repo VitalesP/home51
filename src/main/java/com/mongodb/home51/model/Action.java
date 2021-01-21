@@ -15,19 +15,20 @@ import java.util.List;
 public class Action {
     @Id
     private String id;
+
     @Indexed
-
-
     private LocalDate localDate;
 
     @DBRef
-    private List<Album> albums = new ArrayList<>();
-
-
-    @DBRef
-    private List<Artist> artists = new ArrayList<>();
+    private User user;
 
     @DBRef
-    private List<Composition> compositions = new ArrayList<>();
+    private Album album;
+
+    @DBRef
+    private Artist artist;
+
+    @DBRef
+    private Composition composition;
 
 }
